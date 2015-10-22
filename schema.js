@@ -32,7 +32,7 @@ db.once('open',function(){
   //define schema - mealsSchema - to be nested
   var mealsSchema = new Schema({
     'title': String,
-    'price': Number,
+    'price': Number
    
   });
 
