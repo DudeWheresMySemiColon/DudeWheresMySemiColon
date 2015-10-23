@@ -63,45 +63,9 @@ angular.module('foodly.services', [])
 		});
 	};
 
-	var addOrder = function(meal) {
-		return $http({
-			method: 'POST',
-			url: '/api/users/customer/post/orders',
-			data: meal
-		})
-	};
-
 	return {
 		getMeals: getMeals,
 		addMeal: addMeal
-	};
-
-})
-
-.factory('Order', function($http) {
-
-	var mealToOrder = {};
-
-	var cartOrder = function(meal) {
-		mealToOrder = meal;
-	};
-
-	var submitOrder = function() {
-		return $http({
-			method: 'POST',
-			url: '/api/users/customer/post/order',
-			data: mealToOrder
-		});
-	};
-
-	var getMealOrder = function() {
-		return mealToOrder;
-	};
-
-	return {
-		cartOrder: cartOrder,
-		submitOrder: submitOrder,
-		getMealOrder: getMealOrder
 	};
 
 })
