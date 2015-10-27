@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop Homepage - Start Bootstrap Template</title>
+    <title>Foodly</title>
 
 
     <!-- Bootstrap Core CSS -->
@@ -34,28 +34,29 @@
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
+
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+
+
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Start Bootstrap</a>
+                <a class="navbar-brand" href="#"><img src = 'http://jadedalloul.com/wp-content/uploads/2014/06/Thumbnail_Foodly.jpg' height = 80>
+</a>
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="#">About</a>
+                        <a href="#">Meals</a>
                     </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
+                    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -64,33 +65,57 @@
     </nav>
 
     <!-- Page Content -->
+    <!-- <div class="container col-centered"> -->
+
     <div class="container">
 
-        <div class="row">
 
-            <div class="col-md-3">
-                <p class="lead">Food Options</p>
-                <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
-                </div>
-            </div>
+           
 
-            <div class="col-md-9">
+                
+               
+
+            <div class="col-md-10 col-md-offset-1">
+
+                <div class="row carousel-holder">
+
+
+
+
+
+
+            <!-- <div class="col-md-10 col-md-offset-1"> -->
+
+
 
             <!-- meal images carousel -->
 
                 <div class="row carousel-holder">
 
+
                     <div class="col-md-12">
+                    <h1> welcome to foodly</h1>
+
+
+
+
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+
+
+
+
                             <ol class="carousel-indicators">
+
+
+
+
                                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
                                 <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                             </ol>
                             <div class="carousel-inner">
+
+
                                 <div class="item active">
                                     <img class="slide-image" src="http://www.thesauce.com/Images/_Just%20Launched/800x300/Hollandaise_800x300.jpg" alt="">
                                 </div>
@@ -107,7 +132,9 @@
                             <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                                 <span class="glyphicon glyphicon-chevron-right"></span>
                             </a>
+
                         </div>
+
                     </div>
 
                 </div>
@@ -116,9 +143,9 @@
                 <div id='container'>
 <!-- | limitTo:3 -->
 
-                <!-- <div class="row" ng-controller="MealController"> -->
-                <!-- <div ng-repeat="meal in data.meals " > -->
-
+                <div class="row" ng-controller="MealController">
+              <!--   <div data-ng-init="meals = [{ title: 'pad thai', price: 10 }, { title: 'unicorn meat', price: 20 }, { title: 'bubblegum pie', price: 30 }, { title: 'komodo dragon', price: 10 }, ]" > -->
+                    <div ng-repeat="meal in data.meals">
                     <div class="col-sm-4 col-lg-4 col-md-4">
                         <div class="thumbnail">
                             <img src="http://images.realestateview.com.au/pics/406/Food-Hospitality-Elsternwick-VIC-3185-Real-Estate-photo-1-featured-9374406.jpg" alt="">
@@ -126,6 +153,8 @@
                                 <h4 class="pull-right">${{meal.price}}</h4>
                                 <h4><a href="#">{{meal.title}}</a>
                                 </h4>
+                                <button type="submit" class="btn btn-success pull-right" ng-click="orderMeal(meal)"  >Buy</button>
+
                                 <p>Brief description of this particular meal. Yum, tasty.</p>
                             </div>
                             <div class="ratings">
@@ -142,10 +171,6 @@
                     </div>
 
 
-                
-
-                <!-- </div> -->
-                <!-- </div> -->
 
                 <!-- end meal thumbnails -->
 
@@ -158,18 +183,18 @@
 
     <div class="container">
 
-        <hr>
+        <!-- hr -->
 
         <!-- Footer -->
-        <footer>
+<!--         <footer>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Copyright &copy; Foodly Inc. 2015</p>
                 </div>
             </div>
         </footer>
-
-    </div>
+ -->
+    <!-- </div> -->
     <!-- /.container -->
 
     <!-- jQuery -->
@@ -200,7 +225,6 @@
        </tr>
        <td>
            <td>
-               <button ng-click="order" type="submit" class="btn btn-success">Buy</button>
            </td>
        </td>
        <td>
